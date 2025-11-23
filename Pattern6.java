@@ -1,0 +1,23 @@
+package PrintPatterns;
+
+import java.util.Scanner;
+
+public class Pattern6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Length of Pattern: ");
+        int n = sc.nextInt();
+        int space_len = n;
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= (2*n)-1; j++){
+                int len = space_len-i;
+                if((j > len) && (j<=(((2*n)-1)-len))) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
